@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: ImageStream
+metadata:
+  name: kebechet-advise-manager-worker
+spec:
+  tags:
+  - name: latest
+    from:
+      kind: DockerImage
+      name: quay.io/kpostlet/kebechet-advise-manager-worker:latest
+    importPolicy: {}
+    referencePolicy:
+      type: Local
